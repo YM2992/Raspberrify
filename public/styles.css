@@ -1,0 +1,341 @@
+/* Declarations */
+@font-face {
+    font-family: Hurricane;
+    src: url(/assets/fonts/Hurricane-Regular.ttf);
+}
+
+@font-face {
+    font-family: OFLGoudyStM;
+    src: url(/assets/fonts/OFLGoudyStM.otf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(/assets/fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto Light;
+    src: url(/assets/fonts/Roboto/Roboto-Light.ttf);
+}
+
+
+@font-face {
+    font-family: Digital-7 Mono;
+    src: url('/assets/fonts/Digital-7/digital-7 (mono).ttf');
+}
+
+/* Body */
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+/* Top items */
+#top-items {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 1vw;
+
+    padding: 1vw;
+    z-index: 10;
+}
+#time {
+    position: fixed;
+    top: -1vh;
+    left: 1vw;
+
+    color: white;
+    font-family: Roboto;
+    font-size: 2.5vh;
+}
+#settings-btn {
+    position: fixed;
+    top: 0;
+    right: 0;
+    
+    /* background: rgba(255, 0, 0, 0.25); */
+    background: none;
+    border: none;
+    padding: 1vh 1vw 1vh 3vw;
+
+    height: 4vh;
+    
+    color: white;
+    font-size: 2.5vh;
+    
+    cursor: pointer;
+}
+
+/* Background */
+#background-img {
+    position: fixed;
+    top: -33vh;
+    left: -2%;
+    height: auto;
+    width: 104%;
+
+    filter: blur(10px) brightness(0.7);
+
+    transition: 5s;
+    transition-timing-function: linear;
+}
+
+/* Song Details */
+#polaroid {
+    background-color: white;
+    
+    position: absolute;
+    top: 1vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    height: 93vh;
+    width: 40vw;
+
+    box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.25);
+}
+
+#song-img {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    
+    height: 62.5vh;
+
+    border: solid black 6px;
+    
+    filter: saturate(1.5);
+}
+#paused {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    
+    height: 62.5vh;
+
+    border: solid 6px;
+
+    opacity: 0.5;
+}
+
+#polaroid p, #polaroid div {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#song-title {
+    bottom: 2vh;
+
+    width: 90%;
+    height: 13vh;
+
+    /*background-color: yellow;
+    border: solid 1px black;*/
+
+    color: #262626;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 6.25vh;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#song-artists {
+    top: 80vh;
+
+    width: 90%;
+    height: 5.2vh;
+    color: #616161;
+
+    font-family: OFLGoudyStM;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4.2vh;
+}
+
+#separating-line {
+    top: 81vh;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 1px;
+    width: 90%;
+}
+
+/* Song progress */
+#progress-bar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background-color: #838383;
+}
+#progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 10%;
+    height: 100%;
+    background-color: #FFFFFF;
+
+    transition: 1s;
+    transition-timing-function: linear;
+}
+
+/* Idle screen */
+#idle-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+
+    visibility: hidden;
+
+    color: white;
+}
+
+.idle-text {
+    opacity: 0.6;
+    font-family: 'Roboto';
+}
+
+#idle-time {
+    position: absolute;
+    top: 25vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    opacity: 0.7;
+    font-size: 55vh;
+    font-family: 'Digital-7 Mono';
+
+    margin: 0;
+}
+#idle-time-relation {
+    position: absolute;
+    bottom: 24vh;
+    left: 90vw;
+
+    font-size: 7vh;
+    font-weight: 700;
+}
+
+#day {
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+    
+    font-size: 6vh;
+    font-weight: 500;
+}
+
+#weather-img {
+    position: absolute;
+    top: 75vh;
+    left: 65vw;
+
+    height: 10vh;
+    width: auto;
+}
+#temperature {
+    position: absolute;
+    top: 75vh;
+    right: 18vw;
+
+    opacity: 0.6;
+    font-size: 20vh;
+    font-family: 'Digital-7 Mono';
+
+    margin: 0;
+}
+#temperature-relation {
+    position: absolute;
+    top: 75vh;
+    left: 83vw;
+
+    opacity: 0.6;
+    font-size: 7vh;
+
+    margin: 0;
+}
+
+#idle-screen-text {
+    visibility: hidden;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    opacity: 0.95;
+
+    color: rgb(158, 158, 158);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 4vh;
+}
+
+/* Settings menu */
+#settings-menu {
+    visibility: hidden;
+
+    position: fixed;
+    top: 1vh;
+    right: 1vh;
+
+    background-color: rgba(255, 255, 255, 0.3);
+    border: solid 1px rgb(255, 255, 255);
+    height: 60vh;
+    width: 27.5vw;
+
+    backdrop-filter: blur(50px);
+
+    color: white;
+    font-family: Roboto Light;
+    font-size: 3.5vh;
+}
+
+#settings-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+    margin-top: 7vh;
+    margin-left: 1vw;
+}
+
+#settings-menu ul li {
+    width: calc(100% - 2vw);
+    padding-bottom: 4vh;
+}
+
+#debug-mode {   
+    background: none;
+    border: none;
+    padding: 1vh 1vw 1vh 1vw;
+
+    color: red !important;
+    font-size: 5vh;
+
+    font-weight: bold;
+    
+    cursor: pointer;
+    height: 5vh;
+}

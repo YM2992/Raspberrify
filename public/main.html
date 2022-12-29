@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <container id="top-items">
+            <p id="time">12:30 PM</p>
+            <input id="settings-btn" type="image" src="/assets/images/down-arrow.png" alt="v">
+        </container>
+
+        <img id="background-img" src="" alt=""></img>
+
+        <container id="progress-bar">
+            <div id="progress"></div>
+        </container>
+
+        <container id="polaroid">
+            <img id="song-img" src="" alt="">
+            <img id="paused" src="/assets/images/paused.jpg" alt="">
+            <p id="song-title">Song Title</p>
+            <p id="song-artists">Artists</p>
+            <div id="separating-line"></div>
+        </container>
+
+        <div id="idle-screen">
+            <p id="idle-time">00:00</p>
+            <p id="idle-time-relation" class="idle-text">PM</p>
+            
+            <p id="day" class="idle-text">Monday</p>
+
+            <img id="weather-img" class="idle-text" src="/assets/images/weather_icons/03d.png"/>
+            <p id="temperature">00</p>
+            <p id="temperature-relation" class="idle-text">°C</p>
+
+            <p id="idle-screen-text">Spotify is currently idle</p>
+        </div>
+
+        <div id="settings-menu">
+            <ul>
+                <li>
+                    <label for="spotify-ping-interval">Spotify ping interval (ms)</label>
+                    <select id="spotify-ping-interval" name="spotify-ping-interval">
+                        <option value="100">100</option>
+                        <option value="200">200</option>
+                        <option value="250">250</option>
+                        <option value="500">500</option>
+                        <option value="1000">1000</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="server-ping-interval">Server ping interval (ms)</label>
+                    <select id="server-ping-interval" name="server-ping-interval">
+                        <option value="100">100</option>
+                        <option value="200">200</option>
+                        <option value="250">250</option>
+                        <option value="500">500</option>
+                        <option value="1000">1000</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="debug-mode">Debug mode</label>
+                    <input id="debug-mode" type="image" src="/assets/images/close.png" alt="x">
+                </li>
+            </ul>
+        </div>
+
+
+        <script src="./socketio/socket.io.min.js"></script>
+        <script src="./classes/Spotify.js"></script>
+        <script src="./classes/Time.js"></script>
+        <script src="./classes/Weather.js"></script>
+        <script src="./classes/Animation.js"></script>
+
+        <script src="now-playing.js"></script>
+    </body>
+</html>
