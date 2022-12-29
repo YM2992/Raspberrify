@@ -133,6 +133,8 @@ Get Spotify API tokens.
     node .
     ```
 
+2. Open a web browser and navigate to [http://localhost:3000](http://localhost:3000).
+
 <!-- CONTRIBUTING -->
 ## Contributing
 
