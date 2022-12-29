@@ -76,7 +76,7 @@ Install npm.
 
 Get Spotify API tokens.
 
-*Note: this project does*** *NOT*** *require Spotify premium*
+*Note: this project does* ***NOT*** *require Spotify premium*
 
 1. Navigate to the [Spotify developer dashboard](https://developer.spotify.com/dashboard/) and login with your Spotify account details.
 2. *Create an app* with the app name "Raspberrify" (or whatever you want to call it).
