@@ -84,7 +84,7 @@ Get Spotify API tokens.
 4. Input the following into the textbox and click *Add*:
 
     ```sh
-    http://localhost:3001/spotify/callback
+    http://localhost:3000/callback
     ```
 
 5. Scroll to the bottom of the modal and hit *Save*.
